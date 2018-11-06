@@ -1,0 +1,185 @@
+*{margin: 0; padding: 0;}
+ul{list-style: none;}
+a{color: #333; text-decoration: none;}
+a:hover {color: #66D37E;}
+
+body {
+  background-color: #e8e8e8;
+  color: #808080;
+  font-family: 'Microsoft YaHei';
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.header {
+  box-sizing: border-box;
+  height: 70px;
+  padding: 0 40px;
+  background-color: #fff;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+.header .in-logo {
+  line-height: 70px;
+  float: left;
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  width: 100px;
+  text-align: center;
+}
+.header .in-nav {
+  float: left;
+  display: flex;
+  line-height: 70px;
+  margin-left: 60px;
+  box-sizing: border-box;
+}
+.header .in-nav li {
+  cursor: pointer;
+  color: #999;
+  font-size: 16px;
+  min-width: 60px;
+  text-align: center;
+  box-sizing: border-box;
+  margin-right: 20px;
+  position: relative;
+}
+.header .in-nav li::after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 35px;
+  opacity: 0;
+  right: 0;
+  margin: auto;
+  background-color: #66D37E;
+  height: 2px;
+  transition: all 0.2s ease-in 0s;
+}
+.header .in-nav li.active, .header .in-nav li:hover {
+  color: #333;
+}
+.header .in-nav li:hover::after, .header .in-nav li.active::after {
+  top: 50px;
+  opacity: 1;
+}
+
+.in-tool {
+  float: right;
+  height: 70px;
+  box-sizing: border-box;
+}
+
+.in-search {
+  float: left;
+  margin-top: 20px;
+  width: 150px;
+  padding: 0 30px 0 20px;
+  border-radius: 30px;
+  height: 30px; 
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  position: relative;
+}
+.in-site {
+  float: left;
+  width: 140px;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+.in-site li {
+  float: left;
+  width: 50px;
+  box-sizing: border-box;
+  text-align: center;
+  font-size: 24px;
+  line-height: 70px;
+  cursor: pointer;
+}
+.in-search input {
+  outline: none;
+  border: none;
+  width: 100%;
+  height: 100%;
+  line-height: normal;
+}
+.in-search .icon-search {
+  position: absolute;
+  right: 10px;
+  line-height: 30px;
+  top: 0;
+  color: #ccc;
+}
+
+.content {
+  background-color: #fff;
+  width: 1024px;
+  display: flex;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+.col-1 {
+  flex: 1;
+}
+.col-2 {
+  flex: 2;
+}
+.wrap {
+  padding-top: 80px;
+}
+.block {
+  padding: 20px;
+  display: block;
+  width: 100%;
+}
+.block h4 {
+  color: #333;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 2em;
+}
+.article{
+  background: #eaf0f0;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+.article .tit{
+  font-size: 16px;
+  font-weight: bold;
+}
+.article .h{
+  display: flex;
+  line-height: 1em;
+  padding-bottom: 0.5em;
+}
+.article {
+  color: #999;
+}
+.article .detail {
+  color: #333;
+  font-size: 14px;
+  line-height: 2em;
+}
+.block .in-nodata {
+  width: 100%;
+  line-height: 200px;
+  text-align: center;
+}
+.content .in-wrap {
+  display: flex;
+  width: 100%;
+}
+.content + .content {
+  margin-top: 20px;
+}
+.content .in-item {
+  flex: 1;
+  background-color: #66D37E;
+  height: 200px;
+}
+.content .in-item + .in-item {
+  margin-left: 20px;
+}
